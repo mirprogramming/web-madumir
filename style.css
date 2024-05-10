@@ -2,7 +2,7 @@ a{
     color: inherit; 
     text-decoration: none;
 }
-.home,  .contact-section{
+.home,  .contact{
     height: 100vh; /* Set the height to 100% of the viewport height */
     display: flex; /* Use flexbox */
     justify-content: center; /* Center content horizontally */
@@ -14,7 +14,7 @@ a{
 }
 
 /* Overlay */
-.home::before, .contact-section::before {
+.home::before, .contact::before {
     content: "";
     position: absolute;
     top: 0;
@@ -26,19 +26,28 @@ a{
 }
 
 /* Text over the overlay image */
-.home .container, .contact-section .container {
+.home .container, .contact .container {
     position: relative;
     z-index: 1; /* Ensure text appears above the overlay */
 }
 
-.fee-fitur {
-
-    padding-bottom: 1.5rem;
+.about {
+    height: 20vh;
+    padding-top: 1rem;
 }
 
-.cta {
+.poin1, .poin2, .poin3, .poin4, .poin5 {
+    display: flex;
+    position: relative;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+
+
+}
+
+.contact {
     background-color: #fce9d8;
-    height: 50vh; /* Set the height to 100% of the viewport height */
     display: flex; /* Use flexbox */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
@@ -51,14 +60,22 @@ a{
 
 @media (max-width: 767.98px) {
     /* Center the content vertically and horizontally */
-    #home,
-    #teach,
-    #fee-fitur,
-    #cta {
+    .home,
+    .about,
+    .contact {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       min-height: 50vh;
+    }
+
+    .poin1, .poin2, .poin3, .poin4, .poin5 {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    
+    
     }
   }
